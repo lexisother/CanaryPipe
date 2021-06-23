@@ -11,7 +11,7 @@
         "start": "\"$NODE\" --inspect dist/index.js",
         "lint": "eslint src --ext .js,.ts --ignore-path .gitignore",
         "format": "prettier --write **/*",
-        "postinstall": "husky install"
+        "postinstall": "husky install && patch-package"
     },
     "repository": {
         "type": "git",
@@ -27,5 +27,23 @@
     "bugs": {
         "url": "https://github.com/lexisother/CanaryPipe/issues"
     },
-    "homepage": "https://github.com/lexisother/CanaryPipe#readme"
+    "homepage": "https://github.com/lexisother/CanaryPipe#readme",
+    "devDependencies": {
+        "@types/node": "^15.12.4",
+        "@types/ws": "^7.4.5",
+        "@typescript-eslint/eslint-plugin": "^4.28.0",
+        "@typescript-eslint/parser": "^4.28.0",
+        "eslint": "^7.29.0",
+        "eslint-config-dmitmel": "github:dmitmel/eslint-config-dmitmel",
+        "eslint-plugin-node": "^11.1.0",
+        "husky": "^6.0.0",
+        "patch-package": "^6.4.7",
+        "prettier": "^2.3.1",
+        "ts-node": "^10.0.0",
+        "tsc-watch": "^4.4.0",
+        "typescript": "^4.3.4"
+    },
+    "dependencies": {
+        "discord.js": "^12.5.3"
+    }
 }

@@ -16,9 +16,6 @@ jobs:
               with:
                   node-version: "15.x"
 
-            - name: Install pnpm
-              run: npm i -g pnpm
-
             - uses: actions/cache@v2
               with:
                   path: |
@@ -39,10 +36,10 @@ jobs:
                       ${{ runner.os }}-eslint-
 
             - name: Install dependencies
-              run: pnpm i
+              run: npm i
 
             - name: Build codebase
-              run: mv src/config.example.ts src/config.ts && pnpm run build
+              run: mv src/config.example.ts src/config.ts && npm run build
 
             - name: Run ESLint
-              run: pnpm run lint -- --cache
+              run: npm run lint -- --cache

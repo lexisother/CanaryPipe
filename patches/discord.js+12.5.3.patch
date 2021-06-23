@@ -1,0 +1,17 @@
+diff --git a/node_modules/discord.js/src/client/Client.js b/node_modules/discord.js/src/client/Client.js
+index 5847f75..65eec9f 100644
+--- a/node_modules/discord.js/src/client/Client.js
++++ b/node_modules/discord.js/src/client/Client.js
+@@ -32,7 +32,11 @@ class Client extends BaseClient {
+    * @param {ClientOptions} [options] Options for the client
+    */
+   constructor(options = {}) {
+-    super(Object.assign({ _tokenType: 'Bot' }, options));
++    if (options.user && typeof options.user == "boolean") {
++      super(Object.assign({ _tokenType: "" }, options));
++    } else {
++      super(Object.assign({ _tokenType: "Bot" }, options));
++    }
+ 
+     // Obtain shard details from environment or if present, worker threads
+     let data = process.env;
