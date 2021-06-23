@@ -15,3 +15,15 @@ index 5847f75..65eec9f 100644
  
      // Obtain shard details from environment or if present, worker threads
      let data = process.env;
+diff --git a/node_modules/discord.js/typings/index.d.ts b/node_modules/discord.js/typings/index.d.ts
+index e0be3c6..9692616 100644
+--- a/node_modules/discord.js/typings/index.d.ts
++++ b/node_modules/discord.js/typings/index.d.ts
+@@ -2335,6 +2335,7 @@ declare module 'discord.js' {
+     presence?: PresenceData;
+     ws?: WebSocketOptions;
+     http?: HTTPOptions;
++    user?: boolean;
+   }
+ 
+   type ClientPresenceStatus = 'online' | 'idle' | 'dnd';
