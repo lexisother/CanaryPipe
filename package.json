@@ -1,0 +1,31 @@
+{
+    "name": "canarypipe",
+    "version": "1.0.0",
+    "description": "Tool to pipe Powercord's canary updates to another channel",
+    "main": "dist/index.js",
+    "scripts": {
+        "clean": "rm -r dist",
+        "build": "tsc",
+        "watch": "tsc-watch --onSuccess \"node . dev\"",
+        "dev": "NODE_ENV=dev ts-node .",
+        "start": "\"$NODE\" --inspect dist/index.js",
+        "lint": "eslint src --ext .js,.ts --ignore-path .gitignore",
+        "format": "prettier --write **/*",
+        "postinstall": "husky install"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lexisother/CanaryPipe.git"
+    },
+    "keywords": [
+        "discord",
+        "bot",
+        "typescript"
+    ],
+    "author": "Alyxia Sother",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/lexisother/CanaryPipe/issues"
+    },
+    "homepage": "https://github.com/lexisother/CanaryPipe#readme"
+}
