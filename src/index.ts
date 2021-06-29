@@ -5,6 +5,7 @@ const client = new Client({user: true});
 
 client.on("ready", () => {
     console.log(`logged in as ${client.user?.username}#${client.user?.discriminator}`);
+    client.user?.setStatus("invisible");
 });
 
 client.on("message", async (msg) => {
