@@ -11,7 +11,7 @@
         "start": "\"$NODE\" --inspect dist/index.js",
         "lint": "eslint src --ext .js,.ts --ignore-path .gitignore",
         "format": "prettier --write **/*",
-        "postinstall": "husky install && patch-package"
+        "postinstall": "husky install"
     },
     "repository": {
         "type": "git",
@@ -37,7 +37,6 @@
         "eslint-config-dmitmel": "github:dmitmel/eslint-config-dmitmel",
         "eslint-plugin-node": "^11.1.0",
         "husky": "^6.0.0",
-        "patch-package": "^6.4.7",
         "prettier": "^2.3.1",
         "ts-node": "^10.0.0",
         "tsc-watch": "^4.4.0",
