@@ -1,7 +1,13 @@
 import {Client, TextChannel} from "discord.js";
 import config from "./config";
 
-const client = new Client({user: true});
+declare module "discord.js" {
+    interface ClientOptions {
+        _tokenType?: string;
+    }
+}
+
+const client = new Client({_tokenType: ""});
 
 client.on("ready", () => {
     console.log(`logged in as ${client.user?.username}#${client.user?.discriminator}`);
