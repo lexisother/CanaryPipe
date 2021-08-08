@@ -1,5 +1,6 @@
 const config = {
-    token: ""
+    token: "",
+    channel: ""
 };
 
 export default config;

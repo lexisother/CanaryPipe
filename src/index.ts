@@ -15,9 +15,9 @@ client.on("ready", () => {
 });
 
 client.on("message", async (msg) => {
-    const sendChannel = (await client.channels.fetch("843471565986594816")) as TextChannel;
+    const sendChannel = (await client.channels.fetch(config.channel)) as TextChannel;
     if (msg.channel.id === "755013928647524372" && msg.embeds.length > 0) {
-        if (msg.embeds[0].title?.includes("Experiment Added")) {
+        if (msg.embeds[0].title?.includes("Experiment Added") || msg.embeds[0].title?.includes("Experiment Removed")) {
             sendChannel!.send({embed: msg.embeds[0]});
         }
     }
